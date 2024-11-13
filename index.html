@@ -756,13 +756,50 @@
         <!-- footer section -->
         <section class="container-fluid footer_section">
             <p>
-                © 2019 All Rights Reserved By
-                <a href="https://html.design/">Free Html Templates</a>
+                © 2024 All Rights Reserved By
+                <a href="https://html.design/">Hader Ramirez</a>
             </p>
         </section>
         <!-- footer section -->
     </div>
-
+    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
+        <img src="images/logowhatsapp.png" alt="WhatsApp">
+    </a>
+    <style>
+        /* Botón flotante de WhatsApp */
+        
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            border-radius: 50%;
+            text-align: center;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            /* Para que la imagen se ajuste al borde redondeado */
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            /* Efecto de agrandado */
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
+            /* Sombra más intensa al hacer hover */
+        }
+        
+        .whatsapp-float img {
+            width: 65px;
+            /* Ajusta el tamaño de la imagen */
+            height: 65px;
+        }
+    </style>
 
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
