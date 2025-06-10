@@ -255,6 +255,63 @@
         </section>
         <!-- footer section -->
     </div>
+<a href="https://wa.link/18ttvn" class="whatsapp-float" target="_blank">
+        <img src="images/logowhatsapp.png" alt="WhatsApp">
+    </a>
+    <style>
+        /* Botón flotante de WhatsApp con animación keyframes */
+        .whatsapp-float {
+            position: fixed;
+            width: 65px;
+            height: 65px;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            border-radius: 50%;
+            text-align: center;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            animation: whatsapp-pulse 1.5s infinite;
+        }
+
+        @keyframes whatsapp-pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+                transform: scale(1);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+                transform: scale(1.08);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+                transform: scale(1);
+            }
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.13) rotate(-5deg);
+            box-shadow: 2px 2px 18px rgba(0, 0, 0, 0.5);
+            animation: whatsapp-bounce 0.4s;
+        }
+
+        @keyframes whatsapp-bounce {
+            0%   { transform: scale(1.13) rotate(-5deg);}
+            30%  { transform: scale(1.2) rotate(0deg);}
+            60%  { transform: scale(1.1) rotate(3deg);}
+            100% { transform: scale(1.13) rotate(-5deg);}
+        }
+
+        .whatsapp-float img {
+            width: 65px;
+            height: 65px;
+        }
+    </style>
 
 
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
