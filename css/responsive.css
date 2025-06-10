@@ -3,7 +3,14 @@
     margin-top: 0;
   }
 }
-
+@media (max-width: 768px) {
+  /* Styles for screens 768px and up */
+  .custom_text { 
+    color: #170257c7 ;
+    text-shadow: white 0px 0px 10px;
+    border-color: #1c0368c7 !important;
+  }
+}
 @media (max-width: 992px) {
   .custom_nav-container .nav_search-btn {
     background-position: center;
