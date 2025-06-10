@@ -270,7 +270,7 @@ a:focus {
 .slider_detail-box .btn-box a {
     display: inline-block;
     padding: 12px 40px;
-    background: linear-gradient(45deg, #ffda35, #0a0a0a);
+    background: linear-gradient(45deg, #3c00f3c7, #0a0a0a);
     /* Degradado de amarillo a negro */
     color: #f9fcfb;
     border-radius: 25px;
@@ -322,7 +322,7 @@ a:focus {
 .welcome_section .detail-box a {
     display: inline-block;
     padding: 12px 40px;
-    background: linear-gradient(45deg, #ffda35, #0a0a0a);
+    background: linear-gradient(45deg, #3c00f3c7, #0a0a0a);
     /* Degradado de amarillo a negro */
     color: #f9fcfb;
     border-radius: 25px;
@@ -344,7 +344,6 @@ a:focus {
 }
 
 .service_section {
-    text-align: center;
     color: #f9fcfb;
     background-image: url(../images/service-bg.png);
     background-size: 100% 100%;
@@ -395,7 +394,7 @@ a:focus {
 .service_section a {
     display: inline-block;
     padding: 12px 40px;
-    background: linear-gradient(45deg, #ffda35, #0a0a0a);
+    background: linear-gradient(45deg, #3c00f3c7, #0a0a0a);
     /* Degradado de amarillo a negro */
     color: #f9fcfb;
     border-radius: 25px;
@@ -441,7 +440,7 @@ a:focus {
 .problem_section .detail-box a {
     display: inline-block;
     padding: 12px 40px;
-    background: linear-gradient(45deg, #ffda35, #0a0a0a);
+    background: linear-gradient(45deg, #3c00f3c7, #0a0a0a);
     /* Degradado de amarillo a negro */
     color: #f9fcfb;
     border-radius: 25px;
@@ -610,7 +609,7 @@ a:focus {
 .contact_section button {
     display: inline-block;
     padding: 12px 40px;
-    background-color: #a053f9;
+    background: linear-gradient(45deg, #3c00f3c7, #0a0a0a);
     color: #f9fcfb;
     border-radius: 5px;
     -webkit-box-shadow: 0px 2px 7px 0px rgba(32, 50, 117, 0.26);
@@ -718,7 +717,7 @@ a:focus {
 .info_section .form_container button {
     display: inline-block;
     padding: 12px 40px;
-    background: linear-gradient(45deg, #ffda35, #0a0a0a);
+    background: linear-gradient(45deg, #3c00f3c7, #0a0a0a);
     /* Degradado de amarillo a negro */
     color: #f9fcfb;
     border-radius: 25px;

@@ -62,13 +62,8 @@
                                         <li class="nav-item">
                                             <a class="nav-link" href="contact.html">Contactanos</a>
                                         </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#"> Login</a>
-                                        </li>
                                     </ul>
-                                    <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
-                                        <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
-                                    </form>
+                                   
                                 </div>
                             </div>
                         </nav>
@@ -97,10 +92,10 @@
                                         <p>
                                             "TechFix Solutions: Especialistas en Odoo, desarrollo web y soluciones de software que transforman procesos empresariales en ventajas competitivas."
                                         </p>
-                                        <div class="btn-box">
+                                        <div class="btn-box" >
                                             <a href="" class="btn-1">
-                        Leer mas
-                      </a>
+                                             Leer mas
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -256,8 +251,8 @@
                     </div>
                 </div>
             </div>
-            <div>
-                <a href="">
+            <div style="text-align: center;">
+                <a href="" >
           Leer mas
         </a>
             </div>
@@ -281,7 +276,7 @@
                     <p>
                         En TechFix Solutions somos expertos en identificar cuellos de botella en tus operaciones y desarrollar soluciones tecnológicas a medida. Nuestro enfoque integra implementación de Odoo ERP, desarrollo de software personalizado y estrategias digitales para automatizar procesos, centralizar información y mejorar la toma de decisiones. Transforma los desafíos de tu negocio en oportunidades de crecimiento con nuestra tecnología.
                     </p>
-                    <div>
+                    <div >
                         <a href="">
               Leer mas
             </a>
@@ -467,11 +462,11 @@
             <form>
                 <div class="form-row">
                     <div class="form-group col-md-6">
-                        <label for="inputName4">Name</label>
+                        <label for="inputName4">Nombre</label>
                         <input type="text" class="form-control" id="inputName4" />
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="inputEmail4">Email</label>
+                        <label for="inputEmail4">Correo electrónico</label>
                         <input type="email" class="form-control" id="inputEmail4" />
                     </div>
 
@@ -486,6 +481,9 @@
                         <select id="inputState" class="form-control">
               <option selected=""></option>
               <option>...</option>
+              <option>Odoo</option>
+              <option>Asesoramiento</option>
+              <option>Consulta branding</option>
             </select>
                     </div>
 
@@ -588,7 +586,7 @@
                                         <a href="">+57 3043910549</a>
                                     </li>
                                     <li>
-                                        <p> Ciudad Itagui, Antioquia.</p>
+                                        <a href=""> Ciudad Itagui, Antioquia.</a>
                                     </li>
                                 </ul>
                             </div>
@@ -610,11 +608,6 @@
                         </a>
                     </div>
                     <div class="form_container mt-5">
-                        <form action="subscribe.php" method="POST">
-                            <label for="subscribeMail">Boletín Informativo</label>
-                            <input type="email" name="email" placeholder="Ingrese su correo electrónico" id="subscribeMail" required />
-                            <button type="submit">Suscribirse</button>
-                        </form>
                     </div>
                 </div>
             </div>
@@ -626,7 +619,7 @@
         <!-- footer section -->
         <section class="container-fluid footer_section">
             <p>
-                © 2024 All Rights Reserved By
+                © 2025 All Rights Reserved By
                 <a href="https://html.design/">Techfix Solutions</a>
             </p>
         </section>
@@ -636,8 +629,7 @@
         <img src="images/logowhatsapp.png" alt="WhatsApp">
     </a>
     <style>
-        /* Botón flotante de WhatsApp */
-        
+        /* Botón flotante de WhatsApp con animación keyframes */
         .whatsapp-float {
             position: fixed;
             width: 65px;
@@ -654,22 +646,43 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            /* Para que la imagen se ajuste al borde redondeado */
+            animation: whatsapp-pulse 1.5s infinite;
         }
-        
+
+        @keyframes whatsapp-pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+                transform: scale(1);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+                transform: scale(1.08);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+                transform: scale(1);
+            }
+        }
+
         .whatsapp-float:hover {
-            transform: scale(1.1);
-            /* Efecto de agrandado */
-            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
-            /* Sombra más intensa al hacer hover */
+            transform: scale(1.13) rotate(-5deg);
+            box-shadow: 2px 2px 18px rgba(0, 0, 0, 0.5);
+            animation: whatsapp-bounce 0.4s;
         }
-        
+
+        @keyframes whatsapp-bounce {
+            0%   { transform: scale(1.13) rotate(-5deg);}
+            30%  { transform: scale(1.2) rotate(0deg);}
+            60%  { transform: scale(1.1) rotate(3deg);}
+            100% { transform: scale(1.13) rotate(-5deg);}
+        }
+
         .whatsapp-float img {
             width: 65px;
-            /* Ajusta el tamaño de la imagen */
             height: 65px;
         }
     </style>
+
 
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
