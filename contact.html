@@ -87,7 +87,7 @@
 
         </div>
         <div class="container">
-            <form>
+            <form id="contactForm" onsubmit="sendWhatsAppMessage(event)">
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="inputName4">Nombres</label>
@@ -110,7 +110,7 @@
               <option selected=""></option>
               <option>mantenimiento preventivo</option>
               <option>asesoria en Software</option>
-               <option>Diseño de pagina web</option>
+                <option>Diseño de pagina web</option>
             </select>
                     </div>
 
@@ -128,6 +128,38 @@
 
     </section>
 
+    <script>
+        function sendWhatsAppMessage(event) {
+            event.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('inputName4').value;
+            const email = document.getElementById('inputEmail4').value;
+            const phone = document.getElementById('inputNumber4').value;
+            const service = document.getElementById('inputState').value;
+            const message = document.getElementById('inputMessage').value;
+
+            // Create WhatsApp message
+            const whatsappMessage = `*Nuevo mensaje de contacto*%0A%0A` +
+                `*Nombre:* ${name}%0A` +
+                `*Email:* ${email}%0A` +
+                `*Teléfono:* ${phone}%0A` +
+                `*Servicio:* ${service}%0A` +
+                `*Mensaje:* ${message}`;
+
+            // WhatsApp number (replace with your business number)
+            const whatsappNumber = '573043910549';
+
+            // Create WhatsApp URL
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+
+            // Open WhatsApp in new tab
+            window.open(whatsappUrl, '_blank');
+
+            // Clear form
+            document.getElementById('contactForm').reset();
+        }
+    </script>
 
     <!-- end contact section -->
     <div class="footer_bg">

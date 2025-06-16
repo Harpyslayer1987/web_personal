@@ -21,6 +21,51 @@
       Object.defineProperty(target, descriptor.key, descriptor);
     }
   }
+  function sendWhatsAppMessage() {
+    // Obtener los valores del formulario
+    const name = document.getElementById('inputName4').value;
+    const email = document.getElementById('inputEmail4').value;
+    const phone = document.getElementById('inputNumber4').value;
+    const service = document.getElementById('inputState').value;
+    const message = document.getElementById('inputMessage').value;
+
+    // Validar que los campos requeridos no estén vacíos
+    if (!name || !email || !phone || !service || !message) {
+      alert('Por favor complete todos los campos del formulario');
+      return;
+    }
+
+    // Construir el mensaje para WhatsApp
+    const whatsappMessage = `*Nuevo mensaje de contacto*\n\n` +
+      `*Nombre:* ${name}\n` +
+      `*Email:* ${email}\n` +
+      `*Teléfono:* ${phone}\n` +
+      `*Servicio:* ${service}\n` +
+      `*Mensaje:* ${message}`;
+
+    // Codificar el mensaje para la URL
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    
+    // Número de WhatsApp de la empresa (reemplazar con el número real)
+    const whatsappNumber = '573043910549';
+    
+    // Crear el enlace de WhatsApp
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    
+    // Abrir WhatsApp en una nueva ventana
+    window.open(whatsappUrl, '_blank');
+  }
+
+  // Agregar el evento al botón de envío
+  document.addEventListener('DOMContentLoaded', function() {
+    const submitButton = document.querySelector('button[type="submit"]');
+    if (submitButton) {
+      submitButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        sendWhatsAppMessage();
+      });
+    }
+  });
 
   function _createClass(Constructor, protoProps, staticProps) {
     if (protoProps) _defineProperties(Constructor.prototype, protoProps);
