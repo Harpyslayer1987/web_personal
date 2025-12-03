@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechFix Solutions - Contacto</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1a0b2e 0%, #16213e 50%, #0f3460 100%);
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Animated background effect */
+        body::before {
+            content: '';
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(233, 30, 99, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(0, 212, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, rgba(255, 46, 151, 0.1) 0%, transparent 50%);
+            animation: bgMove 20s ease-in-out infinite;
+            z-index: 0;
+        }
+
+        @keyframes bgMove {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(5%, 5%) rotate(5deg); }
+            66% { transform: translate(-5%, 3%) rotate(-5deg); }
+        }
+
+        /* Floating particles */
+        .particle {
+            position: fixed;
+            width: 3px;
+            height: 3px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            animation: float 15s infinite;
+            z-index: 1;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) translateX(0); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100vh) translateX(50px); opacity: 0; }
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header with logo */
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+        }
+
+        .logo-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .neon-circle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            background: 
+                linear-gradient(#1a0b2e, #1a0b2e) padding-box,
+                linear-gradient(45deg, #ff006e, #3d5af1, #00d4ff, #ff006e) border-box;
+            box-shadow: 
+                0 0 30px rgba(255, 0, 110, 0.6),
+                0 0 60px rgba(61, 90, 241, 0.4),
+                inset 0 0 30px rgba(255, 0, 110, 0.2);
+            animation: pulse 3s ease-in-out infinite, rotate 20s linear infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { 
+                box-shadow: 
+                    0 0 30px rgba(255, 0, 110, 0.6),
+                    0 0 60px rgba(61, 90, 241, 0.4),
+                    inset 0 0 30px rgba(255, 0, 110, 0.2);
+            }
+            50% { 
+                box-shadow: 
+                    0 0 50px rgba(255, 0, 110, 0.8),
+                    0 0 80px rgba(61, 90, 241, 0.6),
+                    inset 0 0 40px rgba(255, 0, 110, 0.3);
+            }
+        }
+
+        @keyframes rotate {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        .logo-content {
+            position: relative;
+            z-index: 3;
+            padding: 20px;
+        }
+
+        .logo-icon {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #e0b3cc 0%, #c8a8d4 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 30px rgba(255, 0, 110, 0.5);
+            position: relative;
+        }
+
+        .logo-icon::before,
+        .logo-icon::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .logo-icon::before {
+            animation: ripple 2s infinite;
+        }
+
+        .logo-icon::after {
+            animation: ripple 2s infinite 1s;
+        }
+
+        @keyframes ripple {
+            0% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(1.5); opacity: 0; }
+        }
+
+        .circuit {
+            width: 80px;
+            height: 80px;
+            stroke: #1a0b2e;
+            stroke-width: 2;
+            fill: none;
+        }
+
+        .logo-text {
+            font-size: 3rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #ff006e 0%, #3d5af1 50%, #00d4ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(255, 0, 110, 0.5);
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .logo-subtitle {
+            font-size: 1.2rem;
+            color: #c8a8d4;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+
+        /* Form container */
+        .form-container {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+            padding: 40px;
+            box-shadow: 
+                0 8px 32px rgba(0, 0, 0, 0.3),
+                0 0 0 1px rgba(255, 255, 255, 0.1),
+                inset 0 0 50px rgba(255, 0, 110, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+
+        .form-container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                45deg,
+                transparent,
+                rgba(255, 0, 110, 0.03),
+                transparent
+            );
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        .form-title {
+            text-align: center;
+            color: #fff;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-shadow: 0 0 20px rgba(255, 0, 110, 0.5);
+        }
+
+        .iframe-wrapper {
+            position: relative;
+            width: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 
+                inset 0 0 30px rgba(0, 0, 0, 0.3),
+                0 0 20px rgba(61, 90, 241, 0.2);
+        }
+
+        iframe {
+            width: 100%;
+            min-height: 1800px;
+            border: none;
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #c8a8d4;
+        }
+
+        .footer-url {
+            font-size: 1.2rem;
+            color: #00d4ff;
+            text-decoration: none;
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .footer-url:hover {
+            color: #ff006e;
+            text-shadow: 0 0 20px rgba(255, 0, 110, 0.8);
+            transform: scale(1.05);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .neon-circle {
+                width: 250px;
+                height: 250px;
+            }
+
+            .logo-text {
+                font-size: 2rem;
+            }
+
+            .logo-subtitle {
+                font-size: 0.9rem;
+                letter-spacing: 4px;
+            }
+
+            .form-container {
+                padding: 20px;
+                border-radius: 20px;
+            }
+
+            .form-title {
+                font-size: 1.5rem;
+            }
+
+            iframe {
+                min-height: 1600px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                padding: 20px 10px;
+            }
+
+            .neon-circle {
+                width: 200px;
+                height: 200px;
+            }
+
+            .logo-icon {
+                width: 80px;
+                height: 80px;
+            }
+
+            .circuit {
+                width: 50px;
+                height: 50px;
+            }
+
+            .logo-text {
+                font-size: 1.5rem;
+            }
+
+            .logo-subtitle {
+                font-size: 0.7rem;
+                letter-spacing: 3px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating particles -->
+    <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
+    <div class="particle" style="left: 20%; animation-delay: 2s;"></div>
+    <div class="particle" style="left: 30%; animation-delay: 4s;"></div>
+    <div class="particle" style="left: 40%; animation-delay: 1s;"></div>
+    <div class="particle" style="left: 50%; animation-delay: 3s;"></div>
+    <div class="particle" style="left: 60%; animation-delay: 5s;"></div>
+    <div class="particle" style="left: 70%; animation-delay: 2.5s;"></div>
+    <div class="particle" style="left: 80%; animation-delay: 4.5s;"></div>
+    <div class="particle" style="left: 90%; animation-delay: 1.5s;"></div>
+
+    <div class="container">
+        <!-- Header with Logo -->
+        <header class="header">
+            <div class="logo-container">
+                <div class="neon-circle"></div>
+                <div class="logo-content">
+                    <div class="logo-icon">
+                        <svg class="circuit" viewBox="0 0 100 100">
+                            <circle cx="50" cy="30" r="5" fill="#1a0b2e"/>
+                            <line x1="50" y1="35" x2="50" y2="50" stroke="#1a0b2e"/>
+                            <circle cx="50" cy="50" r="8" fill="#1a0b2e"/>
+                            <line x1="50" y1="58" x2="50" y2="70" stroke="#1a0b2e"/>
+                            <line x1="35" y1="50" x2="42" y2="50" stroke="#1a0b2e"/>
+                            <line x1="58" y1="50" x2="65" y2="50" stroke="#1a0b2e"/>
+                            <circle cx="30" cy="50" r="4" fill="#1a0b2e"/>
+                            <circle cx="70" cy="50" r="4" fill="#1a0b2e"/>
+                            <line x1="40" y1="35" x2="45" y2="45" stroke="#1a0b2e"/>
+                            <line x1="60" y1="35" x2="55" y2="45" stroke="#1a0b2e"/>
+                            <circle cx="40" cy="35" r="3" fill="#1a0b2e"/>
+                            <circle cx="60" cy="35" r="3" fill="#1a0b2e"/>
+                        </svg>
+                    </div>
+                    <h1 class="logo-text">TECHFIX</h1>
+                    <p class="logo-subtitle">SOLUTIONS</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Form Container -->
+        <main class="form-container">
+            <h2 class="form-title">Registro de mantenimiento de computadores</h2>
+            <div class="iframe-wrapper">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScwWaq_M_uhk7KL87hPnVJYnW6quKaj_5wXFAGehYNh1biy1Q/viewform?embedded=true" marginheight="0" marginwidth="0">Cargando…</iframe>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <a href="https://www.techfixsolution.site" target="_blank" class="footer-url">
+                www.techfixsolution.site
+            </a>
+        </footer>
+    </div>
+</body>
+</html>

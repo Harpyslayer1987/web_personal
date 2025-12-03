@@ -66,6 +66,11 @@
                                         <li class="nav-item">
                                             <a class="nav-link" href="contact.html">Contactanos</a>
                                         </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link form-link-btn" href="form.html" target="_blank">
+                                                <span class="form-icon">📋</span> Formulario Interno
+                                            </a>
+                                        </li>
                                     </ul>
                                    
                                 </div>
@@ -549,8 +554,15 @@
                 </div>
         </div>
 
-        <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center flex-column align-items-center">
             <button type="submit" class="">Enviar</button>
+            <div class="internal-form-link-container">
+                <a href="form.html" class="internal-form-link">
+                    <span class="link-icon">📋</span>
+                    <span class="link-text">Acceder al Formulario Interno de TechFix</span>
+                    <span class="link-arrow">→</span>
+                </a>
+            </div>
         </div>
         </form>
 
@@ -621,6 +633,7 @@
                                     <li>
                                         <a href="https://opensource.com/">Software de Código Abierto</a>
                                     </li>
+                                    
                                 </ul>
                             </div>
                         </div>
@@ -735,6 +748,151 @@
         .whatsapp-float img {
             width: 65px;
             height: 65px;
+        }
+
+        /* Estilos para el enlace del formulario interno en navbar */
+        .form-link-btn {
+            position: relative;
+            background: linear-gradient(135deg, #864ddf 0%, #203376 100%);
+            border-radius: 25px;
+            padding: 8px 20px !important;
+            margin-left: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(134, 77, 223, 0.3);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .form-link-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(134, 77, 223, 0.5);
+            background: linear-gradient(135deg, #9a5ef0 0%, #2a3f8a 100%);
+        }
+
+        .form-link-btn .form-icon {
+            font-size: 18px;
+            animation: iconPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes iconPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        /* Estilos para el botón destacado en la sección de contacto */
+        .internal-form-link-container {
+            margin-top: 30px;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .internal-form-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 18px 35px;
+            background: linear-gradient(135deg, #864ddf 0%, #203376 50%, #864ddf 100%);
+            background-size: 200% 200%;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 
+                0 8px 25px rgba(134, 77, 223, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            animation: gradientShift 3s ease infinite;
+        }
+
+        .internal-form-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .internal-form-link:hover::before {
+            left: 100%;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .internal-form-link:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 
+                0 12px 35px rgba(134, 77, 223, 0.6),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+            background-position: 100% 50%;
+        }
+
+        .internal-form-link:active {
+            transform: translateY(-1px) scale(0.98);
+        }
+
+        .internal-form-link .link-icon {
+            font-size: 24px;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+            animation: iconBounce 2s ease-in-out infinite;
+        }
+
+        @keyframes iconBounce {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            25% { transform: translateY(-3px) rotate(-5deg); }
+            75% { transform: translateY(-3px) rotate(5deg); }
+        }
+
+        .internal-form-link .link-text {
+            flex: 1;
+            text-align: center;
+        }
+
+        .internal-form-link .link-arrow {
+            font-size: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .internal-form-link:hover .link-arrow {
+            transform: translateX(5px);
+        }
+
+        /* Responsive para el botón del navbar */
+        @media (max-width: 991px) {
+            .form-link-btn {
+                margin-left: 0;
+                margin-top: 10px;
+                width: fit-content;
+            }
+        }
+
+        /* Responsive para el botón destacado */
+        @media (max-width: 768px) {
+            .internal-form-link {
+                padding: 15px 25px;
+                font-size: 14px;
+                gap: 10px;
+            }
+
+            .internal-form-link .link-icon {
+                font-size: 20px;
+            }
+
+            .internal-form-link .link-arrow {
+                font-size: 18px;
+            }
         }
     </style>
 
