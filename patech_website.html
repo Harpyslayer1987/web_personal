@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PA TECH Soluciones - Servicios TI y Seguridad Electrónica</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0e27;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Fondo animado eléctrico */
+        .electric-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a2040 50%, #0a0e27 100%);
+        }
+
+        .electric-bg::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(0, 150, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(0, 200, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, rgba(0, 180, 255, 0.1) 0%, transparent 50%);
+            animation: pulse 15s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(-5%, -5%) scale(1.1); }
+        }
+
+        /* Header */
+        header {
+            padding: 2rem 5%;
+            background: rgba(10, 14, 39, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 150, 255, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            text-align: center;
+            flex: 1;
+        }
+
+        .home-btn {
+            background: linear-gradient(135deg, #0096ff 0%, #00d4ff 100%);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 150, 255, 0.4);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .home-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(0, 212, 255, 0.6);
+        }
+
+        .logo-container h1 {
+            font-size: 3rem;
+            background: linear-gradient(135deg, #0096ff 0%, #00d4ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-shadow: 0 0 30px rgba(0, 150, 255, 0.5);
+        }
+
+        .logo-container p {
+            color: #00d4ff;
+            font-size: 1.2rem;
+            letter-spacing: 3px;
+            margin-top: 0.5rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 4rem 5% 3rem;
+            position: relative;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #fff 0%, #00d4ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #a0aec0;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* Services Container */
+        .services-container {
+            padding: 3rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .service-section {
+            margin-bottom: 4rem;
+            background: rgba(26, 32, 64, 0.6);
+            border-radius: 20px;
+            padding: 3rem;
+            border: 1px solid rgba(0, 150, 255, 0.2);
+            backdrop-filter: blur(10px);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 150, 255, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .service-section:hover::before {
+            left: 100%;
+        }
+
+        .service-section:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 212, 255, 0.5);
+            box-shadow: 0 10px 40px rgba(0, 150, 255, 0.3);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            gap: 1rem;
+        }
+
+        .icon {
+            font-size: 3rem;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0096ff 0%, #00d4ff 100%);
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0, 150, 255, 0.4);
+        }
+
+        .section-header h3 {
+            font-size: 2rem;
+            color: #00d4ff;
+            flex: 1;
+        }
+
+        .section-description {
+            color: #a0aec0;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .service-card {
+            background: rgba(15, 20, 45, 0.8);
+            border-radius: 15px;
+            padding: 1.5rem;
+            border: 1px solid rgba(0, 150, 255, 0.2);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .service-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #0096ff, #00d4ff);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateX(10px);
+            border-color: rgba(0, 212, 255, 0.6);
+            background: rgba(20, 25, 55, 0.9);
+        }
+
+        .service-card:hover::after {
+            transform: scaleX(1);
+        }
+
+        .service-card h4 {
+            color: #00d4ff;
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .service-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .service-card li {
+            color: #cbd5e0;
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .service-card li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: #0096ff;
+            font-size: 1.2rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem 5%;
+            background: rgba(10, 14, 39, 0.9);
+            border-top: 1px solid rgba(0, 150, 255, 0.3);
+            margin-top: 3rem;
+        }
+
+        footer p {
+            color: #a0aec0;
+            font-size: 1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .home-btn {
+                order: -1;
+                align-self: flex-end;
+            }
+
+            .logo-container h1 {
+                font-size: 2rem;
+            }
+
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+
+            .service-section {
+                padding: 2rem 1.5rem;
+            }
+
+            .section-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .section-header h3 {
+                font-size: 1.5rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animación de entrada */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .service-section {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .service-section:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+    </style>
+</head>
+<body>
+    <div class="electric-bg"></div>
+
+    <header>
+        <div class="logo-container">
+            <h1>PA TECH</h1>
+            <p>SOLUCIONES</p>
+        </div>
+        <a href="index.html" class="home-btn">
+            <span>🏠</span>
+            <span>Inicio</span>
+        </a>
+    </header>
+
+    <section class="hero">
+        <h2>Tu Aliado Tecnológico Integral</h2>
+        <p>Ofrecemos soluciones completas en tecnología de la información y seguridad electrónica para empresas y hogares. Innovación, confiabilidad y excelencia en cada servicio.</p>
+        <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(0, 150, 255, 0.1); border-radius: 15px; border: 1px solid rgba(0, 212, 255, 0.3); display: inline-block;">
+            <p style="color: #00d4ff; font-size: 1.3rem; font-weight: 600;">🤝 Aliado Oficial de <span style="background: linear-gradient(135deg, #0096ff 0%, #00d4ff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 800;">TechFix Solutions</span></p>
+        </div>
+    </section>
+
+    <div class="services-container">
+        <!-- Servicios de TI -->
+        <div class="service-section">
+            <div class="section-header">
+                <div class="icon">🖥️</div>
+                <h3>Servicios de TI y Soporte Tecnológico Empresarial</h3>
+            </div>
+            <p class="section-description">Todo lo relacionado con sistemas, computadores y nube</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <h4>Administración de Active Directory</h4>
+                    <ul>
+                        <li>Gestión de usuarios y permisos</li>
+                        <li>Políticas de seguridad</li>
+                        <li>Control centralizado</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h4>Administración de Microsoft 365</h4>
+                    <ul>
+                        <li>Configuración completa</li>
+                        <li>Gestión de usuarios y licencias</li>
+                        <li>Seguridad y soporte técnico</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h4>Migración de Correo a Microsoft 365</h4>
+                    <ul>
+                        <li>Traslado seguro de correos</li>
+                        <li>Migración de contactos y calendarios</li>
+                        <li>Cero pérdida de información</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h4>Asesorías en Tecnología TI</h4>
+                    <ul>
+                        <li>Diagnóstico tecnológico</li>
+                        <li>Recomendaciones estratégicas</li>
+                        <li>Optimización de recursos</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h4>Mantenimiento de Equipos</h4>
+                    <ul>
+                        <li>Formateo de computadores y portátiles</li>
+                        <li>Instalación de sistemas operativos</li>
+                        <li>Instalación de programas y software</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Servicios de Seguridad -->
+        <div class="service-section">
+            <div class="section-header">
+                <div class="icon">📡</div>
+                <h3>Servicios de Seguridad Electrónica y Redes</h3>
+            </div>
+            <p class="section-description">Todo lo físico: cámaras, alarmas y cableado</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <h4>Instalación de Cámaras de Seguridad (CCTV)</h4>
+                    <ul>
+                        <li>Para hogares y residencias</li>
+                        <li>Oficinas corporativas</li>
+                        <li>Locales comerciales</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h4>Instalación de Alarmas Inalámbricas</h4>
+                    <ul>
+                        <li>Apartamentos</li>
+                        <li>Oficinas</li>
+                        <li>Locales comerciales</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h4>Mantenimiento de CCTV</h4>
+                    <ul>
+                        <li>Mantenimiento preventivo y correctivo</li>
+                        <li>Rack, DVR/NVR y disco duro</li>
+                        <li>Cableado y componentes del sistema</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h4>Cableado Estructurado</h4>
+                    <ul>
+                        <li>Instalación de puntos de red</li>
+                        <li>Redes de datos para equipos</li>
+                        <li>Infraestructura para cámaras y sistemas</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 PA TECH Soluciones | Aliado Oficial de TechFix Solutions</p>
+        <p style="margin-top: 0.5rem; color: #00d4ff;">Tecnología e Innovación a tu Servicio</p>
+    </footer>
+</body>
+</html>
