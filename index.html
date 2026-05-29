@@ -1,895 +1,559 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- Mobile Metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <!-- Site Metas -->
-    <meta name="keywords"
-        content="asesoría funcional Odoo, implementación Dolibarr ERP, soluciones tecnológicas, actualización software hardware, mantenimiento preventivo computadores domicilio, desarrollo web, apps móviles, agentes IA, TechFix Solutions, consultoría tecnológica, soporte técnico" />
-    <meta name="description"
-        content="TechFix Solutions: Especialistas en asesoría funcional de Odoo, implementación de Dolibarr ERP, soluciones tecnológicas, actualización de software y hardware, y mantenimiento preventivo de computadores a domicilio. Transformamos procesos empresariales con tecnología de vanguardia." />
-    <meta name="author" content="" />
-    <meta name="google-site-verification" content="GV11SxhC8noU6-hKJTNv3Ls_sCVhOpLRlLUrNXpqX8s" />
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechFix Solutions · Automatización Empresarial & Odoo ERP</title>
+  <meta name="description" content="Consultoría funcional Odoo ERP y automatización empresarial. Asesoría, parametrización y acompañamiento en Odoo para empresas en Colombia. Expertos en optimización de procesos.">
+  <meta name="keywords" content="consultoría odoo, asesoría odoo, consultor odoo, odoo funcional, parametrización odoo, automatización empresarial, optimización procesos, erp para empresas, odoo para pymes,  odoo colombia">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="TechFix Solutions">
+  <link rel="canonical" href="https://www.techfixsolutions.site/">
 
-    <title>TechFix Solutions: Odoo ERP, Diseño Web, Marketing Digital y Soporte IT</title>
+  <meta property="og:title" content="TechFix Solutions · Automatización Empresarial & Odoo ERP">
+  <meta property="og:description" content="Consultoría funcional Odoo ERP y automatización empresarial. Asesoría, parametrización y acompañamiento en Odoo para empresas en Colombia.">
+  <meta property="og:image" content="https://www.techfixsolutions.site/images/og-image.jpg">
+  <meta property="og:url" content="https://www.techfixsolutions.site">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
 
-    <!-- slider stylesheet -->
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TechFix Solutions · Automatización Empresarial & Odoo ERP">
+  <meta name="twitter:description" content="Consultoría Odoo ERP, automatización empresarial con IA y plataformas SaaS.">
 
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;450;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/logo.png" type="image/png">
 
-    <!-- bootstrap core css -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-
-    <!-- fonts style -->
-    <link href="https://fonts.googleapis.com/css?family=Dosis:400,500|Poppins:400,700&amp;display=swap"
-        rel="stylesheet" />
-    <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet" />
-    <!-- responsive style -->
-    <link href="css/responsive.css" rel="stylesheet" />
-
-    <link rel="canonical" href="https://www.techfixsolutions.site/" />
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "TechFix Solutions",
+    "description": "Consultoría funcional Odoo ERP, automatización empresarial y asesoría en optimización de procesos",
+    "url": "https://www.techfixsolutions.site",
+    "telephone": "+57 3043910549",
+    "email": "techfixsolutionscol@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Itagüí",
+      "addressRegion": "Antioquia",
+      "addressCountry": "CO"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/techfix-solution-7b392b364",
+      "https://www.instagram.com/techfixsolutioncol/",
+      "https://facebook.com/techfixsolutionscol"
+    ]
+  }, {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "FactuMatch",
+    "applicationCategory": "BusinessApplication, AccountingSoftware",
+    "operatingSystem": "Web",
+    "description": "Plataforma SaaS de automatización contable con OCR e IA"
+  }, {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "FixOps",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "description": "Plataforma de gestión de operaciones empresariales"
+  }, {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Agro System",
+    "applicationCategory": "BusinessApplication, AgriculturalSoftware",
+    "operatingSystem": "Web",
+    "description": "ERP agroindustrial para la gestión de cultivos y producción"
+  }]
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
 </head>
-
 <body>
-    <div class="hero_area">
-        <!-- header section strats -->
-        <header class="header_section">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-8">
-                        <nav class="navbar navbar-expand-lg custom_nav-container ">
-                            <a class="navbar-brand" href="index.html">
-                                <img src="images/logo.png" alt="TechFix Solutions Logo"
-                                    style="height: 150px; margin-right: 10px;">
-                                <span>
-                                    TechFix Solutions
-                                </span>
-                            </a>
-                            <button class="navbar-toggler" type="button" data-toggle="collapse"
-                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                                aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
 
-                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                <div class="d-flex  flex-column flex-lg-row align-items-center">
-                                    <ul class="navbar-nav  ">
-                                        <li class="nav-item active">
-                                            <a class="nav-link" href="index.html">Home <span
-                                                    class="sr-only">(current)</span></a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="about.html">Nosotros </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="service.html">Servicios </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="contact.html">Contactanos</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link form-link-btn" href="form.html" target="_blank">
-                                                <span class="form-icon">📋</span> Formulario Interno
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link form-link-btn" href="techfix-planes-page.html">
-                                                <span class="form-icon">📋</span> Planes odoo
-                                            </a>
-                                        </li>
-                                    </ul>
+  <nav class="nav" role="navigation" aria-label="Navegación principal">
+    <div class="container">
+      <a href="index.html" class="nav-brand" aria-label="TechFix Solutions">
+        <div class="nav-logo">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-grad)"/>
+            <path d="M12 12L20 12M20 12L28 12M20 12L20 28M20 12L14 28M20 12L26 28" stroke="#F5F7FA" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="logo-grad" x1="0" y1="0" x2="40" y2="40">
+                <stop offset="0%" stop-color="#C45CFF"/>
+                <stop offset="100%" stop-color="#00D9FF"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span style="font-size:1.1rem;font-weight:700;letter-spacing:-0.03em;color:var(--text-primary);margin-left:8px;">TechFix</span>
+      </a>
 
-                                </div>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!-- end header section -->
-        <!-- slider section -->
-        <section class=" slider_section ">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">01</li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1">02</li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2">03</li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-5 col-md-6">
-                                    <div class="slider_detail-box">
-                                        <h1>
-                                            Soluciones tecnológicas <br /> personalizadas para<br /> tu negocio
-                                        </h1>
-                                        <p>
-                                            Tenemos conocimiento en : Asesoria funcional de Odoo,software y
-                                            hardware,desarrollo web,venta de licencias,mantienmiento preventivo de
-                                            computadores a domicilio y mucho mas, con TechFix Solutions, tu empresa
-                                            puede alcanzar nuevas alturas en eficiencia y productividad.
-                                        </p>
-                                        <div class="btn-box">
-                                            <a href="#" class="btn-1">
-                                                Leer mas
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="slider_img-box">
-                                        <img src="images/slider-img.png" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-5 col-md-6">
-                                    <div class="slider_detail-box">
-                                        <h1>
-                                            Soluciones tecnológicas <br /> integrales para <br /> tu empresa
-                                        </h1>
-                                        <p>
-                                            En TechFix Solutions ofrecemos un grupo de expertos en soluciones digitales
-                                            personalizadas. Desde un asesoria funcional de odoo, hasta un desarrollo
-                                            web, con nuestros aliados vas a obtener siempre una solucion para tus
-                                            necesidades empresariales.
-                                        <div class="btn-box">
-                                            <a href="#" class="btn-1">
-                                                Leer mas
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="slider_img-box">
-                                        <img src="images/slider-img.png" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-5 col-md-6">
-                                    <div class="slider_detail-box">
-                                        <h1>
-                                            Impulsa tu <br />estrategia digital <br /> con nuestras soluciones web
-                                        </h1>
-                                        <p>
-                                            TechFix Solutions es tu socio estratégico en asesoría funcional de Odoo,
-                                            implementación de Dolibarr, soluciones tecnológicas, actualización de
-                                            software y hardware, y mantenimiento preventivo de computadores a domicilio.
-                                            Transformamos tus desafíos tecnológicos en oportunidades de crecimiento
-                                            empresarial.
-                                        </p>
-                                        <div class="btn-box">
-                                            <a href="" class="btn-1">
-                                                Leer mas
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="slider_img-box">
-                                        <img src="images/slider-img.png" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel_btn-container">
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-            </div>
-        </section>
-        <!-- end slider section -->
+      <button class="nav-toggle" aria-label="Abrir menú" type="button">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+
+      <div class="nav-links">
+        <a href="index.html" class="active">Inicio</a>
+        <a href="service.html">Servicios</a>
+        <a href="about.html">Nosotros</a>
+        <a href="blog/index.html">Blog</a>
+        <a href="contact.html" class="btn btn-primary nav-cta">Contactar</a>
+      </div>
     </div>
+  </nav>
 
-    <!-- welcome section -->
-    <section class="welcome_section layout_padding">
-        <div class="container">
-            <div class="custom_heading-container">
-                <h2>
-                    ¡Bienvenidos a TechFix Solutions!
-                </h2>
-            </div>
-            <div class="layout_padding2">
-                <div class="img-box">
-                    <img src="images/welcome.png" alt="" />
-                </div>
-                <div class="detail-box">
-                    <p>
-                        Somos especialistas en soluciones tecnológicas empresariales. Ofrecemos asesoría funcional de
-                        Odoo ERP, Un grupo especializado en camaras de seguridad,servidores,diseñadores
-                        graficos,marketing digital y desarrollo web. Nuestro objetivo es optimizar tus procesos y
-                        potenciar tu crecimiento mediante tecnología de vanguardia y soporte técnico confiable.
-                    </p>
-                    <div>
-                        <a href="#">
-                            Leer mas
-                        </a>
-                    </div>
-                </div>
-            </div>
-
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          Consultoría Funcional · Automatización · Optimización
         </div>
-        <!-- aliados section -->
-        <section class="aliados_section">
-            <div class="container">
-                <div class="aliados_heading">
-                    <h2>Nuestros Aliados Estratégicos</h2>
-                    <p>Empresas que fortalecen nuestras soluciones tecnológicas</p>
-                </div>
-
-                <div class="swiper aliadosSwiper" style="overflow: hidden;">
-                    <div class="swiper-wrapper" style="display: flex; flex-direction: row;">
-
-                        <!-- Aliado 1 -->
-                        <div class="swiper-slide">
-                            <a href="patech_website.html" class="aliado_card">
-                                <img src="images/patech.jpeg" alt="Aliado Tecnológico">
-                                <h3>PA tech soluciones</h3>
-                                <span>Soluciones empresariales</span>
-                            </a>
-                        </div>
-
-                        <!-- Aliado 2 -->
-                        <div class="swiper-slide">
-                            <a href="https://evolvedgo.com/inicio" target="_blank" class="aliado_card">
-                                <img src="images/aliado-2.png" alt="Desarrollo de Landing Pages">
-                                <h3>Evolved</h3>
-                                <span>Redes sociales, campañas publicitarias</span>
-                            </a>
-                        </div>
-
-                        <!-- Aliado 3 -->
-                        <div class="swiper-slide">
-                            <a href="/aliados/consultora-it" class="aliado_card">
-                                <img src="images/aliado-3.png" alt="Consultora IT">
-                                <h3>Diseño grafico</h3>
-                                <span>Diseño grafico estrategico</span>
-                            </a>
-                        </div>
-
-                        <!-- Aliado 4 -->
-                        <div class="swiper-slide">
-                            <a href="/aliados/hardware" class="aliado_card">
-                                <img src="images/aliado-4.png" alt="Proveedor de Hardware">
-                                <h3>Hardware</h3>
-                                <span>Infraestructura tecnológica</span>
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Puedes agregar más items aquí si es necesario -->
-
-        <!-- end welcome section -->
-
-
-        <!-- service section -->
-        <section class="service_section">
-            <div class="container">
-                <div class="custom_heading-container">
-                    <h2 class="custom_text">
-                        Nuestros servicios
-                    </h2>
-                </div>
-                <div class="service_container layout_padding2">
-                    <div class="service_box">
-                        <div class="img-box">
-                            <img src="images/s-1.jpg" alt="Implementación ERP" />
-                        </div>
-                        <div class="detail-box">
-                            <h4></h4>
-                            <p>Mantención preventiva de computadores a domicilio con soporte técnico confiable.
-                                Mantenemos tus equipos funcionando optimamente en tu empresa con un equipo de
-                                profesionales.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="service_box">
-                        <div class="img-box">
-                            <img src="images/s-2.jpg" alt="Asesoría Odoo" />
-                        </div>
-                        <div class="detail-box">
-                            <h4>
-                                Asesoría Funcional Odoo y consultoria en odoo post venta <br /> y Soluciones
-                                Tecnológicas
-                            </h4>
-                            <p>
-                                Asesoría funcional y consultoria en odoo post venta.
-                                Capacitación para optimizar tus operaciones desde el dia uno con un equipo de
-                                profesionales y soporte técnico confiable.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="service_box">
-                        <div class="img-box">
-                            <img src="images/s-3.jpg" alt="Desarrollo Web" />
-                        </div>
-                        <div class="detail-box">
-                            <h4>
-                                Desarrollo Web y Aplicaciones Móviles
-                            </h4>
-                            <p>Desarrollo de sitios web empresariales responsivos y aplicaciones móviles personalizadas.
-                                Diseño moderno, funcionalidad robusta y experiencia de usuario optimizada para convertir
-                                visitantes en clientes con un equipo de profesionales y soporte técnico confiable.</p>
-                        </div>
-                    </div>
-                </div>
-                <div style="text-align: center;">
-                    <a href="service.html" class="btn-1">
-                        Leer mas
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- end service section -->
-        <!--problem section -->
-        <section class="problem_section layout_padding">
-            <div class="container">
-                <div class="custom_heading-container">
-                    <h2>
-                        ¿Necesitas optimizar tus procesos empresariales?
-                    </h2>
-                </div>
-                <div class="layout_padding2">
-                    <div class="img-box">
-                        <img src="images/problem.jpg" alt="" />
-                    </div>
-                    <div class="detail-box">
-                        <p>
-                            Ofrecemos soluciones tecnológicas integrales: desde consultoría experta en Odoo ERP y
-                            mantenimiento de computadores, hasta diseño gráfico y marketing digital. Unificamos soporte
-                            técnico y estrategia creativa para impulsar el crecimiento total de tu negocio.
-                        </p>
-                        <div>
-                            <a href="#">
-                                Leer mas
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-        <!-- end problem section -->
-        <!-- why section -->
-
-        <section class="why_section layout_padding">
-            <div class="container">
-                <div class="custom_heading-container">
-                    <h2>
-                        ¿Por qué elegirnos?
-                    </h2>
-                </div>
-                <div class="content-container">
-                    <p>
-                        En TechFix Solutions, contamos con más de 5 años de experiencia en la implementación de Odoo y
-                        otros servicios tecnológicos. Somos una empresa seria y dedicada, donde nuestro grupo de
-                        expertos siempre está dispuesto a ofrecer soluciones efectivas y adaptadas a las necesidades de
-                        cada cliente. Nuestro enfoque en resultados medibles y metodologías ágiles nos permite
-                        garantizar que cada solución tecnológica se traduzca en mejoras tangibles para tu negocio.
-                    </p>
-                    <div class="row">
-                        <div class="col-md-3 col-sm-6">
-                            <div class="img-box">
-                                <img src="images/smiley.png" alt="" />
-                            </div>
-                            <div class="detail-box">
-                                <h3>
-                                    99%
-                                </h3>
-                                <h6>
-                                    Clientes satisfechos
-                                </h6>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="img-box">
-                                <img src="images/monitor.png" alt="" />
-                            </div>
-                            <div class="detail-box">
-                                <h3>
-                                    50+
-                                </h3>
-                                <h6>
-                                    'Planes de trabajo'
-                                </h6>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="img-box">
-                                <img src="images/multiple-users-silhouette.png" alt="" />
-                            </div>
-                            <div class="detail-box">
-                                <h3>
-                                    50+
-                                </h3>
-                                <h6>
-                                    CLIENTES
-                                </h6>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="img-box">
-                                <img src="images/bar-chart.png" alt="" />
-                            </div>
-                            <div class="detail-box">
-                                <h3>
-                                    100%
-                                </h3>
-                                <h6>
-                                    Desarrollos a medida
-                                </h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- end why section -->
-
-        <!-- client section -->
-        <section class="client_section layout_padding">
-            <div class="container">
-                <h2>
-                    Casos de éxito en TechFix Solutions
-                </h2>
-                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="client_container layout_padding2">
-                                <div class="client_text">
-                                    <iframe style="width: 100%; max-width: 535px; height: 380px;"
-                                        src="https://www.youtube.com/embed/e-2Svu1XByE?si=dzfThyTrbayiFI1m"
-                                        title="YouTube video player" frameborder="0" allow="accelerometer; 
-                                  autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                </div>
-                                <div class="detail-box">
-                                    <div class="img-box">
-                                        <img src="images/client2.jpg" alt="" />
-                                    </div>
-                                    <div class="name">
-                                        <h5>
-                                            Hader Ramírez
-                                        </h5>
-                                        <p>
-                                            Ceo en techfix-solutions
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="client_container layout_padding2">
-                                <div class="client_text">
-                                    <div class="video-container">
-                                        <iframe style="width: 100%; max-width: 535px; height: 380px;"
-                                            src="https://www.youtube.com/embed/ghT50XuaVzM?si=o4fMdJZ3rR5Ok_3W"
-                                            title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                                        </iframe>
-                                    </div>
-                                </div>
-                                <div class="detail-box">
-                                    <div class="img-box">
-                                        <img src="images/client.png" alt="" />
-                                    </div>
-                                    <div class="name">
-                                        <h5>
-                                            Mulatos café
-                                        </h5>
-                                        <p>
-                                            Cliente satisfecho con odoo ERP y marketing digital
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <div class="client_container layout_padding2">
-                                <div class="client_text">
-                                    <div class="website-preview-container" style="text-align:center;">
-                                        <a href="https://lemoon.com.co/?srsltid=AfmBOopuUXnmB4OV6n0P-YGAaKzMETvSQjsCmeGMW27nED6Qor31sQfp"
-                                            target="_blank"
-                                            style="display:inline-block; border:1px solid #eee; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
-                                            <img src="images/logo 2.png" alt="Suranexport sas llc"
-                                                style="width:120px; margin:16px auto 8px auto; display:block;">
-                                            <div style="padding:10px 16px; background:#fafbfc;">
-                                                <strong>Fresqueria myn sas</strong><br>
-                                                <span style="font-size:14px; color:#555;">Desarrollo de bebidas</span>
-                                            </div>
-                                        </a>
-                                        <div style="margin-top:8px;">
-                                            <a href="https://lemoon.com.co/?srsltid=AfmBOopuUXnmB4OV6n0P-YGAaKzMETvSQjsCmeGMW27nED6Qor31sQfp"
-                                                target="_blank"
-                                                style="color:#007bff; text-decoration:underline;">Visitar sitio web</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="detail-box">
-                                    <div class="img-box">
-                                        <img src="images/logo 2.png" alt="" />
-                                    </div>
-                                    <div class="name">
-                                        <h5>
-                                            Fresqueria myn sas
-                                        </h5>
-                                        <p>
-                                            empresa de alimentos cliente satisfecho odoo ERP
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="client_container layout_padding2">
-                                <div class="client_text">
-                                    <div class="website-preview-container" style="text-align:center;">
-                                        <a href="https://www.esenciaspa.site/" target="_blank"
-                                            style="display:inline-block; border:1px solid #eee; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
-                                            <img src="images/logoesencia.jpeg" alt="Suranexport sas llc"
-                                                style="width:120px; margin:16px auto 8px auto; display:block;">
-                                            <div style="padding:10px 16px; background:#f3f3f3;">
-                                                <strong>Esencia </strong><br>
-                                                <span style="font-size:14px; color:#555;">Spa de uñas</span>
-                                            </div>
-                                        </a>
-                                        <div style="margin-top:8px;">
-                                            <a href="https://www.esenciaspa.site/" target="_blank"
-                                                style="color:#007bff; text-decoration:underline;">Visitar sitio web</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="detail-box">
-                                    <div class="img-box">
-                                        <img src="images/logoesencia.jpeg" alt="" />
-                                    </div>
-                                    <div class="name">
-                                        <h5>
-                                            Esencia spa de uñas
-                                        </h5>
-                                        <p>
-                                            empresa satisfecha con desarrollo web y marketing digital
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="client_container layout_padding2" style="text-align: center;" width="100%"
-                                height="auto">
-                                <div class="client_text">
-                                    <div class="website-preview-container" style="text-align:center;">
-                                        <a href="https://techfixsolutionscol.github.io/Web-Aros/" target="_blank"
-                                            style="display:inline-block; border:1px solid #eee; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
-                                            <img src="images/Aros.jpg" alt="Suranexport sas llc"
-                                                style="width:120px; margin:16px auto 8px auto; display:block;">
-                                            <div style="padding:10px 16px; background:#fafbfc;">
-                                                <strong>Aros ssg y Recursos humanos</strong><br>
-                                                <span style="font-size:14px; color:#555;">Seguridad y salud en el
-                                                    trabajo</span>
-                                            </div>
-                                        </a>
-                                        <div style="margin-top:8px;">
-                                            <a href="https://techfixsolutionscol.github.io/Web-Aros/" target="_blank"
-                                                style="color:#007bff; text-decoration:underline;">Visitar sitio web</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="detail-box">
-                                    <div class="img-box">
-                                        <img src="images/logo3.jpg" alt="" />
-                                    </div>
-                                    <div class="name">
-                                        <h5>
-                                            Alba Rubiela Ospina (Gerente Aros ssg)
-                                        </h5>
-                                        <p>
-                                            Lider en seguridad y salud en el trabajo
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-
-            </div>
-        </section>
-        <!-- end client section -->
-        <!-- contact section -->
-        <section class="contact_section layout_padding">
-            <div class="container contact_heading">
-                <h2>
-                    Potencia tu negocio con nuestra tecnología
-                </h2>
-                <p>
-                    ¿Buscas asesoría funcional de Odoo? ¿Necesitas implementar Dolibarr ERP? ¿Requieres actualización de
-                    software y hardware? ¿Buscas mantenimiento preventivo de computadores a domicilio? ¿Quieres
-                    desarrollar una aplicación web empresarial? En TechFix Solutions estamos listos para convertir tus
-                    desafíos tecnológicos en oportunidades de crecimiento. Cuéntanos sobre tu proyecto y descubre cómo
-                    podemos ayudarte a alcanzar tus objetivos empresariales.
-                </p>
-            </div>
-            <div class="container">
-                <form id="contactForm" onsubmit="sendWhatsAppMessage(event)">
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="inputName4">Nombres</label>
-                            <input type="text" class="form-control" id="inputName4" />
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="inputEmail4">Correo electrónico</label>
-                            <input type="email" class="form-control" id="inputEmail4" />
-                        </div>
-
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="inputNumber4">Numero telefonico</label>
-                            <input type="tel" class="form-control" id="inputNumber4" />
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="inputState">Selecciona un servicio</label>
-                            <select id="inputState" class="form-control">
-                                <option selected=""></option>
-                                <option>Asesoría Funcional Odoo</option>
-                                <option>Implementación Dolibarr ERP</option>
-                                <option>Desarrollo Web y Apps</option>
-                                <option>Actualización Software y Hardware</option>
-                                <option>Mantenimiento Preventivo Computadores</option>
-                                <option>Soluciones Tecnológicas</option>
-                            </select>
-                        </div>
-
-                    </div>
-                    <div class="form-group">
-                        <label for="inputMessage">Mensaje</label>
-                        <input type="text" class="form-control" id="inputMessage" placeholder="" />
-                    </div>
-
-                    <div class="d-flex justify-content-center flex-column align-items-center">
-                        <button type="submit" class="">Enviar</button>
-                        <div class="internal-form-link-container">
-                            <a href="form.html" class="internal-form-link">
-                                <span class="link-icon">📋</span>
-                                <span class="link-text">Acceder al Formulario Interno de TechFix</span>
-                                <span class="link-arrow">→</span>
-                            </a>
-                        </div>
-                    </div>
-                </form>
-            </div>
-
-        </section>
-
-
-        <!-- end contact section -->
-        <div class="footer_bg">
-            <!-- info section -->
-            <section class="info_section layout_padding2-bottom">
-                <div class="container">
-                    <h3 class="">
-                        TechFix Solutions
-                    </h3>
-                </div>
-                <div class="container info_content">
-                    <div>
-                        <div class="row">
-                            <!-- Sección de Enlaces Útiles -->
-                            <div class="col-md-6 col-lg-4">
-                                <div class="d-flex">
-                                    <h5>
-                                        Enlaces Útiles
-                                    </h5>
-                                </div>
-                                <div class="d-flex">
-                                    <ul>
-                                        <li>
-                                            <a href="about.html">Sobre Nosotros</a>
-                                        </li>
-                                        <li>
-                                            <a href="services.html">Nuestros Servicios</a>
-                                        </li>
-                                        <li>
-                                            <a href="departments.html">Departamentos</a>
-                                        </li>
-                                        <li>
-                                            <a href="contact.html">Contáctanos</a>
-                                        </li>
-                                        <li>
-                                            <a href="blog.html">Blog Tecnológico</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <!-- Sección de Recursos Tecnológicos -->
-                            <div class="col-md-6 col-lg-4">
-                                <div class="d-flex">
-                                    <h5>
-                                        Recursos Tecnológicos
-                                    </h5>
-                                </div>
-                                <div class="d-flex">
-                                    <ul>
-                                        <li>
-                                            <a href="https://www.techradar.com/">Noticias de Tecnología</a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.w3schools.com/">Tutoriales de Programación</a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.geeksforgeeks.org/">Recursos de Programación</a>
-                                        </li>
-                                        <li>
-                                            <a href="https://ai.google/">Innovaciones en IA</a>
-                                        </li>
-                                        <li>
-                                            <a href="https://opensource.com/">Software de Código Abierto</a>
-                                        </li>
-
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <!-- Sección de Información de Contacto -->
-                            <div class="col-md-6 col-lg-4">
-                                <div class="d-flex">
-                                    <h5>
-                                        Contáctanos
-                                    </h5>
-                                </div>
-                                <div class="d-flex">
-                                    <ul>
-                                        <li>
-                                            <a href="">techfixsolutionscol@gmail.com</a>
-                                        </li>
-                                        <li>
-                                            <a href="">+57 3043910549</a>
-                                        </li>
-                                        <li>
-                                            <a href=""> Ciudad Itagui, Antioquia.</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Redes Sociales y Newsletter -->
-                    <div
-                        class="d-flex flex-column flex-lg-row justify-content-between align-items-center align-items-lg-baseline">
-                        <div class="social-box">
-                            <a href="https://facebook.com/techfixsolutionscol" target="_blank">
-                                <img src="images/fb.png" alt="Facebook" />
-                            </a>
-                            <a href="https://www.linkedin.com/in/techfix-solution-7b392b364" target="_blank">
-                                <img src="images/linkedin1.png" alt="LinkedIn" />
-                            </a>
-                            <a href="https://www.instagram.com/techfixsolutioncol/" target="_blank">
-                                <img src="images/instagram1.png" alt="Instagram" />
-                            </a>
-                        </div>
-                        <div class="form_container mt-5">
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-            <!-- end info_section -->
-
-            <!-- footer section -->
-            <section class="container-fluid footer_section">
-                <p>
-                    © 2025 All Rights Reserved By
-                    <a href="https://html.design/">Techfix Solutions</a>
-                </p>
-            </section>
-            <!-- footer section -->
+        <h1>
+          <span class="gradient-text">Automatización</span><br>
+          <span class="accent">Empresarial</span> con Odoo ERP
+        </h1>
+        <p>
+          Ayudamos a empresas a optimizar sus procesos usando Odoo ERP, 
+          automatización inteligente y soluciones empresariales.
+        </p>
+        <div class="hero-tags">
+          <span class="hero-tag">Consultoría Odoo</span>
+          <span class="hero-tag">Automatización</span>
+          <span class="hero-tag">Optimización</span>
+          <span class="hero-tag">Parametrización</span>
+          <span class="hero-tag">Capacitación</span>
+          <span class="hero-tag">Acompañamiento</span>
         </div>
-        <a href="https://wa.link/18ttvn" class="whatsapp-float" target="_blank">
-            <img src="images/logowhatsapp.png" alt="WhatsApp">
-        </a>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <div class="hero-ctas">
+          <a href="contact.html" class="btn btn-primary btn-lg">Agendar Consultoría</a>
+          <a href="#ecosystem" class="btn btn-secondary btn-lg">Ver Soluciones</a>
+        </div>
+      </div>
 
-        <script>
-            new Swiper('.aliadosSwiper', {
-                loop: true,
-                speed: 1200,
-                autoplay: {
-                    delay: 2500,
-                    disableOnInteraction: false,
-                },
-                spaceBetween: 30,
-                breakpoints: {
-                    320: {
-                        slidesPerView: 1.2,
-                    },
-                    576: {
-                        slidesPerView: 2,
-                    },
-                    768: {
-                        slidesPerView: 3,
-                    },
-                    1024: {
-                        slidesPerView: 4,
-                    },
-                },
-            });
+      <div class="hero-visual">
+        <div class="hero-glow"></div>
+        <div class="dash-slider" id="dashSlider">
+          <div class="dash-slide active">
+            <img src="images/products/factumatch-dash.png" alt="FactuMatch Dashboard" class="dash-img" loading="lazy">
+            <div class="dash-label">FactuMatch · Automatización Contable</div>
+          </div>
+          <div class="dash-slide">
+            <img src="images/products/fixops-dash.png" alt="FixOps Dashboard" class="dash-img" loading="lazy">
+            <div class="dash-label">FixOps · Gestión de Operaciones</div>
+          </div>
+          <div class="dash-slide">
+            <img src="images/products/agro-dash.png" alt="Agro System Dashboard" class="dash-img" loading="lazy">
+            <div class="dash-label">Agro System · ERP Agroindustrial</div>
+          </div>
+          <div class="dash-dots"></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            function sendWhatsAppMessage(event) {
-                event.preventDefault();
+  <section class="stack" aria-label="Stack tecnológico">
+    <div class="stack-track">
+      <span class="stack-item"><span class="stack-item-icon">🔷</span> Odoo ERP</span>
+      <span class="stack-item"><span class="stack-item-icon">🐍</span> Python</span>
+      <span class="stack-item"><span class="stack-item-icon">🐘</span> PostgreSQL</span>
+      <span class="stack-item"><span class="stack-item-icon">🐳</span> Docker</span>
+      <span class="stack-item"><span class="stack-item-icon">📄</span> OCR</span>
+      <span class="stack-item"><span class="stack-item-icon">🔗</span> APIs REST</span>
+      <span class="stack-item"><span class="stack-item-icon">🤖</span> Inteligencia Artificial</span>
+      <span class="stack-item"><span class="stack-item-icon">⚡</span> Automatización</span>
+      <span class="stack-item"><span class="stack-item-icon">☁️</span> Cloud</span>
+      <span class="stack-item"><span class="stack-item-icon">🔷</span> Odoo ERP</span>
+      <span class="stack-item"><span class="stack-item-icon">🐍</span> Python</span>
+      <span class="stack-item"><span class="stack-item-icon">🐘</span> PostgreSQL</span>
+      <span class="stack-item"><span class="stack-item-icon">🐳</span> Docker</span>
+      <span class="stack-item"><span class="stack-item-icon">📄</span> OCR</span>
+      <span class="stack-item"><span class="stack-item-icon">🔗</span> APIs REST</span>
+      <span class="stack-item"><span class="stack-item-icon">🤖</span> Inteligencia Artificial</span>
+      <span class="stack-item"><span class="stack-item-icon">⚡</span> Automatización</span>
+      <span class="stack-item"><span class="stack-item-icon">☁️</span> Cloud</span>
+    </div>
+  </section>
 
-                const name = document.getElementById('inputName4').value;
-                const email = document.getElementById('inputEmail4').value;
-                const phone = document.getElementById('inputNumber4').value;
-                const service = document.getElementById('inputState').value;
-                const message = document.getElementById('inputMessage').value;
+  <section class="section ecosystem" id="ecosystem">
+    <div class="container">
+      <div class="section-label">Ecosistema</div>
+      <h2 class="section-title">
+        Nuestras <span class="highlight">Soluciones</span> Empresariales
+      </h2>
+      <p class="section-sub">
+        Tecnología SaaS diseñada para transformar procesos empresariales con automatización inteligente.
+      </p>
 
-                if (!name || !phone) {
-                    alert('Por favor, completa al menos tu nombre y número telefónico.');
-                    return;
-                }
+      <div class="ecosystem-grid">
+        <article class="eco-card fade-in">
+          <div class="eco-icon purple">📄</div>
+          <h3>FactuMatch</h3>
+          <p>Automatización contable con OCR e IA. Validación de facturas, conciliación bancaria y gestión documental.</p>
+          <ul class="eco-features">
+            <li>OCR inteligente para facturas</li>
+            <li>Validación automática</li>
+            <li>Conciliación bancaria</li>
+          </ul>
+          <img src="images/products/factumatch-dash.png" alt="FactuMatch Dashboard" class="eco-preview" loading="lazy">
+          <a href="contact.html" class="btn btn-primary">Conocer más</a>
+        </article>
 
-                const phoneNumber = "573043910549"; // TechFix Solutions Number
+        <article class="eco-card fade-in">
+          <div class="eco-icon cyan">⚙️</div>
+          <h3>FixOps</h3>
+          <p>Gestión inteligente de operaciones empresariales. Automatización de workflows y seguimiento en tiempo real.</p>
+          <ul class="eco-features">
+            <li>Workflows automatizados</li>
+            <li>Dashboard en tiempo real</li>
+            <li>Gestión de tareas</li>
+          </ul>
+          <img src="images/products/fixops-dash.png" alt="FixOps Dashboard" class="eco-preview" loading="lazy">
+          <a href="contact.html" class="btn btn-primary">Conocer más</a>
+        </article>
 
-                let text = `*Hola TechFix, quiero más información.*\n\n`;
-                text += `*Nombre:* ${name}\n`;
-                text += `*Teléfono:* ${phone}\n`;
-                if (email) text += `*Email:* ${email}\n`;
-                if (service) text += `*Servicio de interés:* ${service}\n`;
-                if (message) text += `*Mensaje:* ${message}`;
+        <article class="eco-card fade-in">
+          <div class="eco-icon green">🌾</div>
+          <h3>Agro System</h3>
+          <p>ERP agroindustrial especializado. Gestión de cultivos, producción, inventarios y trazabilidad.</p>
+          <ul class="eco-features">
+            <li>Gestión de cultivos</li>
+            <li>Trazabilidad completa</li>
+            <li>Control de producción</li>
+          </ul>
+          <img src="images/products/agro-dash.png" alt="Agro System Dashboard" class="eco-preview" loading="lazy">
+          <a href="contact.html" class="btn btn-primary">Conocer más</a>
+        </article>
 
-                const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
-                window.open(url, '_blank');
-            }
-        </script>
+        <article class="eco-card fade-in">
+          <div class="eco-icon orange">🔷</div>
+          <h3>Consultoría Odoo</h3>
+          <p>Asesoría funcional, parametrización y acompañamiento empresarial con Odoo ERP. Optimizamos tus procesos de negocio.</p>
+          <ul class="eco-features">
+            <li>Consultoría funcional Odoo</li>
+            <li>Parametrización empresarial</li>
+            <li>Capacitación y acompañamiento</li>
+          </ul>
+          <a href="service.html" class="btn btn-primary">Ver servicios</a>
+        </article>
+      </div>
+    </div>
+  </section>
 
+  <section class="section" id="odoo">
+    <div class="container">
+      <div class="section-label">Especialistas</div>
+      <h2 class="section-title">
+        Consultoría <span class="highlight">Odoo ERP</span> para Empresas
+      </h2>
+      <div class="odoo-intro">
+        <p class="section-sub">
+          Acompañamos a empresas en la optimización de procesos con Odoo ERP. 
+          Consultoría funcional, capacitación y mejora continua.
+        </p>
+        <div class="odoo-intro-img">
+          <img src="images/odoo-erp.png" alt="Odoo ERP" loading="lazy" class="lb-trigger">
+        </div>
+      </div>
 
-        <!-- Swiper JS -->
+      <div class="odoo-grid">
+        <div class="odoo-card fade-in">
+          <div class="odoo-card-icon">📋</div>
+          <h3>Consultoría Funcional</h3>
+          <p>Asesoría experta en procesos empresariales con Odoo ERP. Diagnóstico y planificación estratégica.</p>
+        </div>
+        <div class="odoo-card fade-in">
+          <div class="odoo-card-icon">⚡</div>
+          <h3>Automatización Operativa</h3>
+          <p>Automatización de flujos de trabajo para reducir tareas manuales y mejorar la eficiencia.</p>
+        </div>
+        <div class="odoo-card fade-in">
+          <div class="odoo-card-icon">🎯</div>
+          <h3>Parametrización</h3>
+          <p>Configuración funcional de Odoo ERP adaptada a la operación de tu empresa.</p>
+        </div>
+        <div class="odoo-card fade-in">
+          <div class="odoo-card-icon">📚</div>
+          <h3>Capacitación</h3>
+          <p>Formación y acompañamiento para que tu equipo adopte Odoo de manera efectiva.</p>
+        </div>
+        <div class="odoo-card fade-in">
+          <div class="odoo-card-icon">🔄</div>
+          <h3>Optimización</h3>
+          <p>Mejora continua de procesos con dashboards, KPIs y análisis de datos en tiempo real.</p>
+        </div>
+        <div class="odoo-card fade-in">
+          <div class="odoo-card-icon">🤝</div>
+          <h3>Soporte Funcional</h3>
+          <p>Acompañamiento continuo y consultoría por horas para resolver desafíos operativos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <section class="section automation" id="automation">
+    <div class="container">
+      <div class="section-label">Automatización</div>
+      <h2 class="section-title">
+        Automatización Empresarial <span class="highlight">con IA</span>
+      </h2>
+      <p class="section-sub">
+        Reducción de tareas manuales, validación inteligente de documentos y workflows automatizados.
+      </p>
 
-        <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-        <script type="text/javascript" src="js/bootstrap.js"></script>
+      <div class="automation-content">
+        <div class="automation-list">
+          <div class="automation-item fade-in-left">
+            <div class="automation-item-icon">📄</div>
+            <div>
+              <h4>OCR Inteligente</h4>
+              <p>Reconocimiento óptico de caracteres para facturas, documentos y formularios con validación automática.</p>
+            </div>
+          </div>
+          <div class="automation-item fade-in-left">
+            <div class="automation-item-icon">🔄</div>
+            <div>
+              <h4>Workflows Automatizados</h4>
+              <p>Automatización de procesos contables, aprobaciones y flujos de trabajo empresariales.</p>
+            </div>
+          </div>
+          <div class="automation-item fade-in-left">
+            <div class="automation-item-icon">🤖</div>
+            <div>
+              <h4>IA Aplicada a Procesos</h4>
+              <p>Modelos de inteligencia artificial para predicción, clasificación y optimización de operaciones.</p>
+            </div>
+          </div>
+          <div class="automation-item fade-in-left">
+            <div class="automation-item-icon">🔗</div>
+            <div>
+              <h4>Integración de Datos</h4>
+              <p>Conexión con APIs, bases de datos y servicios cloud para unificar la información empresarial.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="automation-stats">
+          <div class="automation-stat fade-in">
+            <div class="automation-stat-value">+40%</div>
+            <div class="automation-stat-label">Eficiencia operativa</div>
+          </div>
+          <div class="automation-stat fade-in">
+            <div class="automation-stat-value">-60%</div>
+            <div class="automation-stat-label">Tareas manuales</div>
+          </div>
+          <div class="automation-stat fade-in">
+            <div class="automation-stat-value">24/7</div>
+            <div class="automation-stat-label">Automatización continua</div>
+          </div>
+          <div class="automation-stat fade-in">
+            <div class="automation-stat-value">99%</div>
+            <div class="automation-stat-label">Precisión OCR</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="cases">
+    <div class="container">
+      <div class="section-label">Casos de Éxito</div>
+      <h2 class="section-title">
+        Resultados que <span class="highlight">Transforman</span>
+      </h2>
+      <p class="section-sub">
+        Métricas e impacto real de la automatización empresarial en nuestros clientes.
+      </p>
+
+      <div class="cases-grid">
+        <article class="case-card fade-in">
+          <div class="case-card-visual">
+            <div class="case-chart-mini">
+              <div class="bar before" style="height:35%"></div>
+              <div class="bar after" style="height:85%"></div>
+              <div class="bar before" style="height:40%"></div>
+              <div class="bar after" style="height:78%"></div>
+              <div class="bar before" style="height:30%"></div>
+              <div class="bar after" style="height:92%"></div>
+            </div>
+          </div>
+          <div class="case-body">
+            <h3>Automatización Contable</h3>
+            <div class="case-metrics">
+              <div class="case-metric">
+                <div class="case-metric-value">-70%</div>
+                <div class="case-metric-label">Tiempo procesamiento</div>
+              </div>
+              <div class="case-metric">
+                <div class="case-metric-value">+95%</div>
+                <div class="case-metric-label">Precisión datos</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-card fade-in">
+          <div class="case-card-visual">
+            <div class="case-chart-mini">
+              <div class="bar before" style="height:25%"></div>
+              <div class="bar after" style="height:90%"></div>
+              <div class="bar before" style="height:45%"></div>
+              <div class="bar after" style="height:80%"></div>
+              <div class="bar before" style="height:20%"></div>
+              <div class="bar after" style="height:88%"></div>
+            </div>
+          </div>
+          <div class="case-body">
+            <h3>Implementación Odoo ERP</h3>
+            <div class="case-metrics">
+              <div class="case-metric">
+                <div class="case-metric-value">+50%</div>
+                <div class="case-metric-label">Eficiencia operativa</div>
+              </div>
+              <div class="case-metric">
+                <div class="case-metric-value">-45%</div>
+                <div class="case-metric-label">Costos operativos</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-card fade-in">
+          <div class="case-card-visual">
+            <div class="case-chart-mini">
+              <div class="bar before" style="height:30%"></div>
+              <div class="bar after" style="height:82%"></div>
+              <div class="bar before" style="height:35%"></div>
+              <div class="bar after" style="height:75%"></div>
+              <div class="bar before" style="height:28%"></div>
+              <div class="bar after" style="height:85%"></div>
+            </div>
+          </div>
+          <div class="case-body">
+            <h3>OCR + Automatización Documental</h3>
+            <div class="case-metrics">
+              <div class="case-metric">
+                <div class="case-metric-value">-80%</div>
+                <div class="case-metric-label">Procesamiento manual</div>
+              </div>
+              <div class="case-metric">
+                <div class="case-metric-value">+60%</div>
+                <div class="case-metric-label">Velocidad facturación</div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-final">
+    <div class="container">
+      <div class="cta-glass fade-in">
+        <h2>¿Listo para transformar tu empresa?</h2>
+        <p>Consultoría funcional Odoo ERP y automatización inteligente para tu empresa.</p>
+        <a href="contact.html" class="btn btn-primary btn-lg">Agendar Consultoría Gratis</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-brand" style="display:flex;align-items:center;gap:10px;">
+            <div style="width:32px;height:32px;">
+              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+                <rect width="40" height="40" rx="10" fill="url(#logo-grad-f)"/>
+                <path d="M12 12L20 12M20 12L28 12M20 12L20 28M20 12L14 28M20 12L26 28" stroke="#F5F7FA" stroke-width="2.5" stroke-linecap="round"/>
+                <defs>
+                  <linearGradient id="logo-grad-f" x1="0" y1="0" x2="40" y2="40">
+                    <stop offset="0%" stop-color="#C45CFF"/>
+                    <stop offset="100%" stop-color="#00D9FF"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <span style="font-weight:700;font-size:1rem;color:var(--text-primary);">TechFix</span>
+          </a>
+          <p>Consultoría funcional Odoo ERP, automatización empresarial y optimización de procesos.</p>
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/in/techfix-solution-7b392b364" target="_blank" aria-label="LinkedIn">
+              <img src="images/linkedin1.png" alt="LinkedIn TechFix Solutions">
+            </a>
+            <a href="https://www.instagram.com/techfixsolutioncol/" target="_blank" aria-label="Instagram">
+              <img src="images/instagram1.png" alt="Instagram TechFix Solutions">
+            </a>
+            <a href="https://facebook.com/techfixsolutionscol" target="_blank" aria-label="Facebook">
+              <img src="images/fb.png" alt="Facebook TechFix Solutions">
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Productos</h4>
+          <div class="footer-links">
+            <a href="contact.html">FactuMatch</a>
+            <a href="contact.html">FixOps</a>
+            <a href="contact.html">Agro System</a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Servicios</h4>
+          <div class="footer-links">
+            <a href="service.html">Consultoría Odoo</a>
+            <a href="service.html">Automatización</a>
+            <a href="service.html">Parametrización</a>
+            <a href="service.html">Capacitación</a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Recursos</h4>
+          <div class="footer-links">
+            <a href="blog/index.html">Blog</a>
+            <a href="about.html">Nosotros</a>
+            <a href="contact.html">Contacto</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2025 TechFix Solutions. Todos los derechos reservados.</span>
+        <span>Itagüí, Antioquia · Colombia</span>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.link/18ttvn" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+    <span class="whatsapp-tooltip">Escríbenos</span>
+    <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.96 9.96 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M17 14.7c0 .3-.1.6-.3.9-.2.3-.5.5-.8.7-.6.4-1.3.6-2.1.6-1.6 0-3.2-.7-4.4-1.9S7.5 11.5 7.5 9.8c0-.8.2-1.5.6-2.1.2-.3.4-.6.7-.8.3-.2.6-.3.9-.3h.4c.3 0 .6 0 .7.5l.5 1.1c0 .1.1.3 0 .4-.1.1-.2.2-.2.3-.1.1-.2.2-.3.3-.1.1-.2.2-.1.4.3.5.6 1 .9 1.4.4.4.8.8 1.3 1.1.1.1.3.1.4 0 0 0 .1-.1.3-.3l.3-.3c.1-.1.3-.2.4-.1l1.1.5c.5.2.5.5.5.7z" fill="white"/>
+    </svg>
+  </a>
+
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-img" id="lightboxImg" alt="Dashboard ampliado">
+  </div>
+
+  <script src="js/main.js" defer></script>
 </body>
-
 </html>

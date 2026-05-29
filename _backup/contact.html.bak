@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Site Metas -->
+    <meta name="keywords" content="contacto TechFix Solutions, soporte técnico, consultoría tecnológica, mantenimiento computadores domicilio, asesoría Odoo, implementación Dolibarr, Itagui Antioquia" />
+    <meta name="description" content="Contacta con TechFix Solutions. Ofrecemos asesoría funcional de Odoo, implementación de Dolibarr ERP, soluciones tecnológicas, actualización de software y hardware, y mantenimiento preventivo de computadores a domicilio. Ubicados en Itagui, Antioquia." />
+    <meta name="author" content="TechFix Solutions" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="canonical" href="https://www.techfixsolutions.site/contact.html" />
+
+    <title>Contacto - TechFix Solutions | Soporte Técnico y Consultoría Tecnológica</title>
+
+    <!-- slider stylesheet -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+    <!-- fonts style -->
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,500|Poppins:400,700&amp;display=swap" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="css/responsive.css" rel="stylesheet" />
+</head>
+
+<body class="sub_page">
+    <div class="hero_area">
+        <!-- header section strats -->
+        <header class="header_section">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <nav class="navbar navbar-expand-lg custom_nav-container ">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="images/logo.png" alt="TechFix Solutions Logo" style="height: 150px; margin-right: 10px;">
+                                <span>
+                  TechFix Solutions
+                </span>
+                            </a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <div class="d-flex  flex-column flex-lg-row align-items-center">
+                                    <ul class="navbar-nav  ">
+                                        <li class="nav-item active">
+                                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="about.html">Nosotros </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="service.html">Servicios </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="contact.html">Contacto</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- end header section -->
+    </div>
+
+    <!-- contact section -->
+    <section class="contact_section layout_padding">
+        <div class="container contact_heading">
+            <h2>
+                
+                Contáctanos
+
+            </h2>
+        <p>
+            ¿Problemas técnicos? ¡TechFix Solutions está aquí para solucionarlos! Nuestro equipo de expertos se especializa en ofrecer soluciones rápidas y eficaces para tus dispositivos y sistemas. Ya sea que necesites asistencia técnica, reparaciones, o mantenimiento, estamos listos para ayudarte. No dudes en comunicarte con nosotros; tu tranquilidad y satisfacción son nuestra prioridad.
+        </p>
+
+        </div>
+        <div class="container">
+            <form id="contactForm" onsubmit="sendWhatsAppMessage(event)">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputName4">Nombres</label>
+                        <input type="text" class="form-control" id="inputName4" />
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4">Email</label>
+                        <input type="email" class="form-control" id="inputEmail4" />
+                    </div>
+
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputNumber4">Numero telefonico</label>
+                        <input type="tel" class="form-control" id="inputNumber4" />
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputState">Selecciona un servicio</label>
+                        <select id="inputState" class="form-control">
+              <option selected=""></option>
+              <option>mantenimiento preventivo</option>
+              <option>asesoria en Software</option>
+                <option>Diseño de pagina web</option>
+            </select>
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <label for="inputMessage">Mensaje</label>
+                    <input type="text" class="form-control" id="inputMessage" placeholder="" />
+                </div>
+        </div>
+
+        <div class="d-flex justify-content-center">
+            <button type="submit" class="">Enviar</button>
+        </div>
+        </form>
+
+    </section>
+
+    <script>
+        function sendWhatsAppMessage(event) {
+            event.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('inputName4').value;
+            const email = document.getElementById('inputEmail4').value;
+            const phone = document.getElementById('inputNumber4').value;
+            const service = document.getElementById('inputState').value;
+            const message = document.getElementById('inputMessage').value;
+
+            // Create WhatsApp message
+            const whatsappMessage = `*Nuevo mensaje de contacto*%0A%0A` +
+                `*Nombre:* ${name}%0A` +
+                `*Email:* ${email}%0A` +
+                `*Teléfono:* ${phone}%0A` +
+                `*Servicio:* ${service}%0A` +
+                `*Mensaje:* ${message}`;
+
+            // WhatsApp number (replace with your business number)
+            const whatsappNumber = '573043910549';
+
+            // Create WhatsApp URL
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+
+            // Open WhatsApp in new tab
+            window.open(whatsappUrl, '_blank');
+
+            // Clear form
+            document.getElementById('contactForm').reset();
+        }
+    </script>
+
+    <!-- end contact section -->
+    <div class="footer_bg">
+        <!-- info section -->
+        <section class="info_section layout_padding2-bottom">
+            <div class="container">
+                <h3 class="">
+                    TechFix Solutions
+                </h3>
+            </div>
+            <div class="container info_content">
+                <div>
+                    <div class="row">
+                        <!-- Sección de Enlaces Útiles -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="d-flex">
+                                <h5>
+                                    Enlaces Útiles
+                                </h5>
+                            </div>
+                            <div class="d-flex">
+                                <ul>
+                                    <li>
+                                        <a href="about.html">Sobre Nosotros</a>
+                                    </li>
+                                    <li>
+                                        <a href="services.html">Nuestros Servicios</a>
+                                    </li>
+                                    <li>
+                                        <a href="departments.html">Departamentos</a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html">Contáctanos</a>
+                                    </li>
+                                    <li>
+                                        <a href="blog.html">Blog Tecnológico</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Sección de Recursos Tecnológicos -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="d-flex">
+                                <h5>
+                                    Recursos Tecnológicos
+                                </h5>
+                            </div>
+                            <div class="d-flex">
+                                <ul>
+                                    <li>
+                                        <a href="https://www.techradar.com/">Noticias de Tecnología</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.w3schools.com/">Tutoriales de Programación</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.geeksforgeeks.org/">Recursos de Programación</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://ai.google/">Innovaciones en IA</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://opensource.com/">Software de Código Abierto</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Sección de Información de Contacto -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="d-flex">
+                                <h5>
+                                    Contáctanos
+                                </h5>
+                            </div>
+                            <div class="d-flex">
+                                <ul>
+                                    <li>
+                                        <a href="">techfixsolutionscol@gmail.com</a>
+                                    </li>
+                                    <li>
+                                        <a href="">+57 3043910549</a>
+                                    </li>
+                                    <li>
+                                        <a href=""> Ciudad Itagui, Antioquia.</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Redes Sociales y Newsletter -->
+                <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center align-items-lg-baseline">
+                    <div class="social-box">
+                        <a href="https://facebook.com/techfixsolutions">
+                            <img src="images/fb.png" alt="Facebook" />
+                        </a>
+                        <a href="https://twitter.com/techfixsolutions">
+                            <img src="images/twitter.png" alt="Twitter" />
+                        </a>
+                        <a href="https://linkedin.com/company/techfixsolutions">
+                            <img src="images/linkedin1.png" alt="LinkedIn" />
+                        </a>
+                        <a href="https://instagram.com/techfixsolutions">
+                            <img src="images/instagram1.png" alt="Instagram" />
+                        </a>
+                    </div>
+                    <div class="form_container mt-5">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- end info_section -->
+
+        <!-- footer section -->
+        <section class="container-fluid footer_section">
+            <p>
+                © 2025 All Rights Reserved By
+                <a href="https://html.design/">Hader Ramirez</a>
+            </p>
+        </section>
+        <!-- footer section -->
+    </div>
+<a href="https://wa.link/18ttvn" class="whatsapp-float" target="_blank">
+        <img src="images/logowhatsapp.png" alt="WhatsApp">
+    </a>
+    <style>
+        /* Botón flotante de WhatsApp con animación keyframes */
+        .whatsapp-float {
+            position: fixed;
+            width: 65px;
+            height: 65px;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            border-radius: 50%;
+            text-align: center;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            animation: whatsapp-pulse 1.5s infinite;
+        }
+
+        @keyframes whatsapp-pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+                transform: scale(1);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+                transform: scale(1.08);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+                transform: scale(1);
+            }
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.13) rotate(-5deg);
+            box-shadow: 2px 2px 18px rgba(0, 0, 0, 0.5);
+            animation: whatsapp-bounce 0.4s;
+        }
+
+        @keyframes whatsapp-bounce {
+            0%   { transform: scale(1.13) rotate(-5deg);}
+            30%  { transform: scale(1.2) rotate(0deg);}
+            60%  { transform: scale(1.1) rotate(3deg);}
+            100% { transform: scale(1.13) rotate(-5deg);}
+        }
+
+        .whatsapp-float img {
+            width: 65px;
+            height: 65px;
+        }
+    </style>
+
+
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+</body>
+
+</html>
